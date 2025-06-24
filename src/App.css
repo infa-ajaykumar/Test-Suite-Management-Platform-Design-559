@@ -1,0 +1,94 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom select styles */
+.react-select-container .react-select__control {
+  border: 1px solid #d1d5db;
+  box-shadow: none;
+  min-height: 42px;
+}
+
+.react-select-container .react-select__control:hover {
+  border-color: #9ca3af;
+}
+
+.react-select-container .react-select__control--is-focused {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.react-select-container .react-select__multi-value {
+  background-color: #e0e7ff;
+}
+
+.react-select-container .react-select__multi-value__label {
+  color: #3730a3;
+}
+
+.react-select-container .react-select__multi-value__remove:hover {
+  background-color: #c7d2fe;
+  color: #3730a3;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(10px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+/* Status indicators */
+.status-running {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-failure {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
